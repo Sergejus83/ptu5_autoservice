@@ -1,0 +1,10 @@
+{% extends 'autoservice/base.html' %}
+{% block title %}Welcome to the {{ block.super }}{% endblock title %}
+{% block content %}
+<h1>PTU5 Autoservice Apps</h1>
+<ul>
+    <li>Service count: {{ name_count }}</li>
+    <li>Total cars: {{ car_count }}</li>
+    <li>Total orders: {{ order_count }}</li>
+</ul> 
+{% endblock content %}

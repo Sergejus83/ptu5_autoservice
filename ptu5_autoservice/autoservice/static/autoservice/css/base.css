@@ -1,0 +1,20 @@
+body {
+    background-color: rgb(51, 110, 123);
+    margin: 0;
+}
+
+header {
+    background-color: rgb(110, 196, 239);
+}
+
+header a {
+    color: azure;
+}
+
+
+.container {
+    background-color: rgba(255, 255, 255, 0.3);
+    /* max-width: 1200px;
+    min-width: 480px; */
+    margin: 0, auto;
+}
