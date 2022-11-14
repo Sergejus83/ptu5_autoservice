@@ -14,7 +14,8 @@
         <div class="container">
             {% block nav %}
                 <a href="{% url 'index' %}">Home</a>
-                {% comment %} <a href="{% url 'service' %}">Service</a> {% endcomment %}
+                <a href="{% url 'cars' %}">Cars</a>
+                <a href="{% url 'orders' %}">Orders</a>
                 <a href="{% url 'admin:index' %}">Admin</a>
             {% endblock nav %}
         </div>
@@ -28,6 +29,7 @@
     <footer>
         <div class="container">
         {% block footer %}
+            <p>(C) 2022 autoservice by Sergejus Bykovas</p>
         {% endblock footer %}
          </div>
     </footer>

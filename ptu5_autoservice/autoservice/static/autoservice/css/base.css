@@ -1,20 +1,38 @@
 body {
     background-color: rgb(51, 110, 123);
     margin: 0;
+    color: rgb(0, 0, 0);
 }
 
 header {
     background-color: rgb(110, 196, 239);
+    text-decoration-style: solid;
 }
 
 header a {
-    color: azure;
+    color: rgb(6, 24, 3);
+    text-align: center;
 }
 
 
 .container {
     background-color: rgba(255, 255, 255, 0.3);
-    /* max-width: 1200px;
-    min-width: 480px; */
-    margin: 0, auto;
+    max-width: 1200px;
+    min-width: 480px;
+    margin: 1rem, 1rem;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+h1 {
+    padding: 0.5rem 1rem;
+    margin: 0.5rem 05rem;
+}
+
+footer {
+    align-content: stretch;
+    color: rgb(8, 33, 55);
 }

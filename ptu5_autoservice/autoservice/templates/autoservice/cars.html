@@ -1,0 +1,21 @@
+{% extends 'autoservice/base.html' %}
+{% block title %} {{car_model}} {{block.super}}{% endblock title %}
+{% block content %}
+    <h1>Cars<h1>
+    <div class="paginator">
+        {% if cars.has_other_pages %}
+            {% for page_number in cars.paginator.page_range %}
+                {% if page_number == cars.number %}
+                    <span>{{ page_number }}</span>
+                {% else %}
+                <a href="?page={{ page_number }}">{{ page_number}}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    </div> 
+    <ul>
+        {% for car in cars%}
+        <li><a href="{% url 'car' car.id %}">{{ cars }}</a></ul>
+        {% endfor %}
+    </ul>
+{% endblock %}

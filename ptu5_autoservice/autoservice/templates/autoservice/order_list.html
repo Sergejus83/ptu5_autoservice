@@ -1,0 +1,25 @@
+{% extends 'autoservice/base.html' %}
+{% block title %} All orders {{block.super}}{% endblock title %}
+{% block content %}
+    <h1>Orders: {{order_count}} pcs<h1>
+    <div class="paginator">
+        {% if page_obj.has_previous %}
+            <a href="?page=1">First | </a>
+            <a href="?page={{ page_obj.previous_page_number }}">Back </a>
+        {% endif %}
+        {{ page_obj.number }} / {{ page_obj.paginator.num_pages }}
+        {% if page_obj.has_next %}
+            <a href="?page={{ page_obj.next_page_number }}">  Next | </a>
+            <a href="?page={{ page_obj.paginator.num_pages }}">Last </a>
+        {% endif %}
+        {% comment %} <form action="{% url 'cars' %}" method="get">
+            <input type="text" name="search" value="{{ request.GET.search }}">
+            <button type="submit">search</button>
+        </form> {% endcomment %}
+    </div> 
+    <ul>
+        {% for order in order_list %} {# order_list - list yra butinas, nes paimtas is ListView klases #}
+        <li><a href="{% url 'order' order.pk %}">{{ order.car }}</a>: {{ order.total }}, {{order.date}}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'autoservice/base.html' %}
+{% block title %}{{car}}{{block.super}}{% endblock title %}
+{% block content %}
+    <h1>Car detail<h1>
+    <ul>
+        <p>Client: {{car.client}}</p>
+        <p>Car model: {{car.car_model}}</p>
+        <p>Plate: {{car.plate}}</p>
+        <p>VIN: {{car.vin}}</p>
+
+    </ul>
+{% endblock %}
